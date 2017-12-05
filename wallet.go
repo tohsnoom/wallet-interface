@@ -1,14 +1,15 @@
 package wallet
 
 import (
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	btc "github.com/btcsuite/btcutil"
-	hd "github.com/btcsuite/btcutil/hdkeychain"
-	"time"
 	"errors"
+	"github.com/phoreproject/btcd/chaincfg"
+	"github.com/phoreproject/btcd/chaincfg/chainhash"
+	btc "github.com/phoreproject/btcutil"
+	hd "github.com/phoreproject/btcutil/hdkeychain"
+	"time"
 )
 
+// Wallet is an interface to the openbazaar payment functionality
 type Wallet interface {
 
 	// Start the wallet
@@ -172,4 +173,3 @@ var (
 	ErrorInsuffientFunds error = errors.New("Insuffient funds")
 	ErrorDustAmount      error = errors.New("Amount is below network dust treshold")
 )
-
